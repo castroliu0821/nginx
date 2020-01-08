@@ -1,0 +1,67 @@
+source code
+openssl-1.1.1d
+pcre2-10.34
+zlib-1.2.11
+
+
+sudo apt install libxml2-dev
+sudo apt install libxslt1-dev
+sudo apt install libgd-dev
+sudo apt install libgeoip-dev
+sudo apt install libgoogle-perftools-dev
+
+
+./auto/configure \
+--prefix=/usr/nginx \
+--sbin-path=/usr/nginx/sbin \
+--modules-path=/usr/nginx/modules \
+--conf-path=/usr/nginx/conf \
+--error-log-path=/usr/nginx/log/errors \
+--pid-path=/usr/nginx/var/pid \
+--lock-path=/usr/nginx/var/nginx.lock \
+--user=nginx \
+--group=nginx \
+--with-select_module \
+--with-threads \
+--with-file-aio \
+--with-http_ssl_module \
+--with-http_v2_module \
+--with-http_realip_module \
+--with-http_addition_module \
+--with-http_xslt_module \
+--with-http_image_filter_module \
+--with-http_geoip_module \
+--with-http_sub_module \
+--with-http_dav_module \
+--with-http_flv_module \
+--with-http_mp4_module \
+--with-http_gunzip_module \
+--with-http_gzip_static_module \
+--with-http_auth_request_module \
+--with-http_random_index_module \
+--with-http_secure_link_module \
+--with-http_degradation_module \
+--with-http_slice_module \
+--with-http_stub_status_module \
+--with-http_perl_module \
+--http-log-path=/usr/nginx/log/http \
+--http-client-body-temp-path=/usr/nginx/http \
+--http-proxy-temp-path=/usr/nginx/http/proxy \
+--http-fastcgi-temp-path=/usr/nginx/http/fast-cgi \
+--with-mail \
+--with-mail_ssl_module \
+--with-stream \
+--with-stream_ssl_module \
+--with-stream_realip_module \
+--with-stream_geoip_module \
+--with-stream_ssl_preread_module \
+--with-google_perftools_module \
+--with-cpp_test_module \
+--with-compat \
+--with-pcre \
+--with-pcre=/home/liuhu/github/pcre2-10.34 \
+--with-pcre-jit \
+--with-zlib=/home/liuhu/github/zlib-1.2.11 \
+--with-openssl=openssl-1.1.1d \
+--with-debug
+
